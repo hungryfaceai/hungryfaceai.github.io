@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>hungryfaceai — root site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description" content="hungryfaceai root site – entry point to the Naptio app." />
+  <meta name="theme-color" content="#0b0b0f">
+
+  <link rel="icon" href="/hungryface/pwa/icons/favicon-196.png" sizes="196x196">
+  <link rel="apple-touch-icon" href="/hungryface/pwa/icons/apple-icon-180.png">
+
+  <style>
+    :root { color-scheme: dark; }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #000;
+      color: #fff;
+      font-family: -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    a { color: #fff; text-decoration: none; opacity: 0.95; }
+    a:hover, a:focus { opacity: 1; text-decoration: underline; }
+
+    .page {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 14px 20px;
+      padding-left: max(20px, env(safe-area-inset-left));
+      padding-right: max(20px, env(safe-area-inset-right));
+    }
+
+    /* Logo style reused from Naptio home */
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+      line-height: 1;
+    }
+    .home-link:hover,
+    .home-link:focus {
+      text-decoration: none;
+    }
+    .icon {
+      width: var(--icon-size, 24px);
+      height: var(--icon-size, 24px);
+      display: block;
+    }
+    .icon-home {
+      --icon-size: 26px;
+    }
+
+    main {
+      flex: 1;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .hero {
+      max-width: 640px;
+    }
+
+    .logo-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 9999px;
+      border: 1px solid rgba(255,255,255,0.16);
+      display: grid;
+      place-items: center;
+      margin: 0 auto 20px;
+      background: radial-gradient(circle at 30% 0%, #222 0, #050505 52%, #000 100%);
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin: 0 0 10px;
+      letter-spacing: -0.03em;
+      font-weight: 800;
+    }
+
+    .note {
+      margin: 0 0 24px;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 9999px;
+      border: 1px solid #fff;
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+      font-size: 0.98rem;
+      line-height: 1;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color .15s ease, color .15s ease;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background: #eaeaea;
+      color: #000;
+      text-decoration: none;
+    }
+
+    /* Store badges row */
+    .store-badges {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .store-badge img {
+      display: block;
+      height: 44px;       /* Adjust if needed, but keep aspect ratio */
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      font-size: 0.9rem;
+      opacity: 0.85;
+      padding-left: max(16px, env(safe-area-inset-left));
+      padding-right: max(16px, env(safe-area-inset-right));
+      padding-bottom: max(16px, env(safe-area-inset-bottom));
+    }
+
+    .footer-note {
+      font-size: 0.75rem;
+      color: #fff;
+      opacity: 0.85;
+      text-decoration: none;
+    }
+    .footer-note:hover,
+    .footer-note:focus {
+      text-decoration: none;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 520px) {
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+    }
+
+    @media (display-mode: standalone) {
+      @supports (padding-top: env(safe-area-inset-top)) {
+        body {
+          padding-top: env(safe-area-inset-top);
+        }
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <a href="https://hungryfaceai.github.io/hungryface/home/" class="home-link" aria-label="Go to Naptio home">
+        <svg class="icon icon-home" aria-hidden="true" focusable="false">
+          <use href="/hungryface/assets/icons.svg#icon-cradle-ai"
+               xlink:href="/hungryface/assets/icons.svg#icon-cradle-ai"></use>
+        </svg>
+      </a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="title">
+        <div class="logo-circle" aria-hidden="true">
+          <svg class="icon icon-home">
+            <use href="/hungryface/assets/icons.svg#icon-cradle-ai"
+                 xlink:href="/hungryface/assets/icons.svg#icon-cradle-ai"></use>
+          </svg>
+        </div>
+
+        <h1 id="title">hungryfaceai root site</h1>
+
+        <p class="note">
+          To use Naptio, the privacy-first AI baby monitor, continue to the main app entry point.
+        </p>
+
+        <a class="btn-primary" href="https://hungryfaceai.github.io/hungryface/home/">
+          Go to Naptio
+        </a>
+
+        <!-- Official store badges -->
+        <div class="store-badges" aria-label="Download Naptio">
+          <!-- Apple App Store badge: use only when the app is actually on the App Store -->
+          <a class="store-badge"
+             href="#"
+             aria-label="Download on the App Store">
+            <!-- TODO: update src to your real App Store badge path, and href to your App Store URL -->
+            <img src="/hungryface/assets/badges/app-store-badge.svg"
+                 alt="Download on the App Store">
+          </a>
+
+          <!-- Google Play badge -->
+          <a class="store-badge"
+             href="https://play.google.com/store/apps/details?id=io.github.hungryfaceai.twa"
+             aria-label="Get it on Google Play">
+            <!-- TODO: update src if you use a different path or PNG -->
+            <img src="/hungryface/assets/badges/google-play-badge.svg"
+                 alt="Get it on Google Play">
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <span class="footer-left footer-note">© 2025 Naptio</span>
+    </footer>
+  </div>
+</body>
+</html>
