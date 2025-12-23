@@ -128,6 +128,12 @@
       height: 44px;       /* Adjust if needed, but keep aspect ratio */
     }
 
+    .alt-install {
+      margin-top: 10px;
+      font-size: 0.85rem;
+      opacity: 0.85;
+    }
+
     footer {
       display: flex;
       justify-content: space-between;
@@ -201,11 +207,11 @@
 
         <!-- Official store badges -->
         <div class="store-badges" aria-label="Download Naptio">
-          <!-- Apple App Store badge: use only when the app is actually on the App Store -->
+          <!-- Apple App Store badge -->
           <a class="store-badge"
-             href="/hungryface/assets/badges/apple-pwa.html"
-             aria-label="Download on the App Store">
-            <!-- TODO: update src to your real App Store badge path, and href to your App Store URL -->
+             href="https://apps.apple.com/us/app/naptio/id6756505573"
+             target="_blank" rel="noopener"
+             aria-label="Download Naptio on the App Store">
             <img src="/hungryface/assets/badges/app-store-badge.svg"
                  alt="Download on the App Store">
           </a>
@@ -213,10 +219,17 @@
           <!-- Google Play badge -->
           <a class="store-badge"
              href="https://play.google.com/store/apps/details?id=io.github.hungryfaceai.twa"
+             target="_blank" rel="noopener"
              aria-label="Get it on Google Play">
             <img src="/hungryface/assets/badges/google-play-badge.svg"
                  alt="Get it on Google Play">
           </a>
+        </div>
+
+        <!-- Optional: keep PWA install as secondary path -->
+        <div class="alt-install">
+          Prefer the web app? Install via Safari:
+          <a href="/hungryface/assets/badges/apple-pwa.html">Add to Home Screen</a>
         </div>
       </section>
     </main>
