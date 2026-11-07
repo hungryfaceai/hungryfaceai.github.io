@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<!--
+  Org landing page (hungryfaceai.github.io root). A single static page that points visitors to the Naptio app
+  (/hungryface/home/), the App Store and Google Play listings, and the web-app install help page.
+  Styles are inline; the logo and icons come from /hungryface/assets/icons.svg. No scripts.
+-->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -11,6 +16,7 @@
   <link rel="apple-touch-icon" href="/hungryface/pwa/icons/apple-icon-180.png">
 
   <style>
+    /* Landing page styles: dark theme, centred hero, store badge row. */
     :root { color-scheme: dark; }
 
     html, body {
@@ -187,6 +193,7 @@
     </header>
 
     <main>
+      <!-- Hero: logo, intro text, primary button, store badges, web-app link -->
       <section class="hero" aria-labelledby="title">
         <div class="logo-circle" aria-hidden="true">
           <svg class="icon icon-home">
